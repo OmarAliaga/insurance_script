@@ -13,12 +13,11 @@ args = parser.parse_args()
 def function(path,phrase):
     files = glob.glob(r'{0}/*.txt'.format(path),recursive=True)
     for file in files:
-        print(file)
         with open(file,"r") as f:
             lines = f.readlines()
             for line in lines:
                 if phrase in line:
-                    print(line)
+                    print(file.split("/")[-1])
 
 
 if __name__ == '__main__' :
