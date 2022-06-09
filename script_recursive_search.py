@@ -1,5 +1,6 @@
 import glob
 import argparse
+import os
 from time import perf_counter
 
 
@@ -10,9 +11,9 @@ args = parser.parse_args()
 
 
 def function(path,phrase):
-    path += '/*.txt'
-    files = glob.glob(path)
+    files = glob.glob(r'{0}/*.txt'.format(path),recursive=True)
     for file in files:
+        print(file)
         with open(file,"r") as f:
             lines = f.readlines()
             for line in lines:
