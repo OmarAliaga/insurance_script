@@ -26,4 +26,3 @@ if __name__ == '__main__' :
     t1_stop = perf_counter()
     elapsed_time = t1_stop -t1_start
     print(f'Elapsed time during the program ejecution: {elapsed_time}')
-
