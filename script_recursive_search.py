@@ -21,7 +21,7 @@ def function(path,phrase):
                     print(line)
 
 
-if __name__ == '__main__':
+if __name__ == '__main__' :
     t1_start = perf_counter()
     function(args.path,args.phrase)
     t1_stop = perf_counter()
